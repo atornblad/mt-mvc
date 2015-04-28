@@ -12,6 +12,7 @@ class RoutingTests {
         $route = $routing->handle('');
         
         // Assert
+        The($route->controllerName)->shouldEqual('Home');
         The($route->controllerClassName)->shouldEqual('HomeController');
         The($route->methodName)->shouldEqual('Index');
         The($route->parameter)->shouldNotBeSet();
@@ -28,6 +29,7 @@ class RoutingTests {
         $route = $routing->handle('Articles');
         
         // Assert
+        The($route->controllerName)->shouldEqual('Articles');
         The($route->controllerClassName)->shouldEqual('ArticlesController');
         The($route->methodName)->shouldEqual('Index');
         The($route->parameter)->shouldNotBeSet();
@@ -44,6 +46,7 @@ class RoutingTests {
         $route = $routing->handle('Categories/List');
         
         // Assert
+        The($route->controllerName)->shouldEqual('Categories');
         The($route->controllerClassName)->shouldEqual('CategoriesController');
         The($route->methodName)->shouldEqual('List');
         The($route->parameter)->shouldNotBeSet();
@@ -60,6 +63,7 @@ class RoutingTests {
         $route = $routing->handle('Products/Item/123x');
         
         // Assert
+        The($route->controllerName)->shouldEqual('Products');
         The($route->controllerClassName)->shouldEqual('ProductsController');
         The($route->methodName)->shouldEqual('Item');
         The($route->parameter)->shouldEqual('123x');

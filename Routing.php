@@ -26,6 +26,7 @@ class Routing {
         if (!$methodName) $methodName = 'Index';
         
         return (object) [
+            'controllerName' => $controllerName,
             'controllerClassName' => $controllerName . 'Controller',
             'methodName' => $methodName,
             'parameter' => $parameter
