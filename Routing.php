@@ -1,10 +1,6 @@
 <?php
 
 class Routing {
-    public $controllerClassName;
-    public $methodName;
-    public $parameter;
-    
     /**
      * Processes a URL for MVC routing
      * 
